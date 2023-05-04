@@ -8,7 +8,7 @@
   margin: auto;
   }
 
-h1 {
+#title {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20pt;
   color:rgb(26, 7, 7);
@@ -28,8 +28,8 @@ body {
   margin: 0;
   display: flex;
   overflow: hidden;
+  overflow-y: auto; /* barras de rolagem apenas quando necessário */
   text-align: justify;
-  padding-bottom: 100%;
 }
 .image-invisible {
   opacity: 0;
@@ -54,25 +54,51 @@ body {
 
 }
 
+
+path {
+  fill: transparent;
+}
+
+text {
+  fill: #ea00ff;
+  font-size: 2em;
+}
+svg{
+  display: inline;
+  position: absolute;
+}
+
 a {
   display: none;
   position: fixed;
   color: black;
   font-family: sans-serif;
 }
-footer{
-  margin: 90% 0 0 0;
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 9rem;           /* Footer height */
+  padding: 12.800px;
+  border-top: groove;
+  border-color: rgba(95, 22, 22, 0.089)
+}
+
+#image{
+  text-align: center;
 }
 
 #abrirPopUp {
-  position: relative;
+  display: block;
+  position: absolute;
+  top: 48em;
   margin-left: 12.800px;
 
 }
 #formularioPopUp {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 24em;
   left: 50%;
   transform: translate(-50%, -50%);
   background:linear-gradient(to bottom, rgb(24, 3, 3), rgb(112, 40, 40));
@@ -92,6 +118,15 @@ footer{
 
 #pinvisivel {
   display: none;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
 
 @keyframes explosao {

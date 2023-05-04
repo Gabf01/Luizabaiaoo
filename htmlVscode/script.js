@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function logar(){
   var senha = document.getElementById('senha').value;
-  var image = document.getElementById('image');
   if (senha == "Ituano"){
     var minhaImagem = document.getElementById('image');
   minhaImagem.classList.add('image-visible');
