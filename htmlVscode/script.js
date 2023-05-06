@@ -27,7 +27,9 @@ function logar(){
   var senha = document.getElementById('senha').value;
   if (senha == "Ituano"){
     var minhaImagem = document.getElementById('image');
+    var footerBackground = document.getElementById('footer');
   minhaImagem.classList.add('image-visible');
+  footerBackground.classList.add('background-footer')
 } else {
   var minhaImagem = document.getElementById('image');
   minhaImagem.classList.remove('image-visible');
